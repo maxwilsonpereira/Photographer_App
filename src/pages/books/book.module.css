@@ -1,0 +1,121 @@
+.containerBio {
+  /* display: grid; */
+  max-width: 900px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 40px;
+  /* display: grid;
+      grid-template-columns: 50% 50%;
+      box-sizing: border-box;
+      justify-content: space-around;
+      column-gap: 50px; */
+}
+.gridWithTwo {
+  display: grid;
+  grid-template-columns: 46% 46%;
+  box-sizing: border-box;
+  justify-items: start;
+  /* align-items: end; */
+  align-content: space-evenly;
+  column-gap: 50px;
+  padding: 0;
+}
+.minSize {
+  height: 75px;
+}
+.images {
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 100%;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.75);
+}
+.horizontalLine {
+  margin: 10px 0;
+}
+.containerBio h1 {
+  color: rgb(50, 50, 50);
+  text-shadow: 2.2px 2.2px 2px rgba(0, 0, 0, 0.8);
+  font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
+  /* text-transform: uppercase !important; */
+  /* border-bottom: 2px solid currentColor; */
+  /* text-decoration: underline; */
+  display: inline-block;
+  font-size: 1.8rem;
+  line-height: 1.2em;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  text-transform: none;
+  font-weight: normal;
+}
+.containerBio h3 {
+  color: rgb(50, 50, 50);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+  font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
+  /* text-transform: uppercase !important; */
+  text-align: justify;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  line-height: 1.3em;
+  text-transform: none;
+  font-weight: normal;
+}
+.subtitle {
+  font-size: 1.2rem !important;
+  color: #ae6e3d !important;
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7) !important;
+  text-transform: uppercase !important;
+}
+.highlightWord {
+  /* color: #8f2c31 !important; */
+  text-shadow: 1px 0px 1px rgba(0, 0, 0, 0.7) !important;
+  /* text-transform: uppercase !important; */
+}
+.mobileOnly {
+  display: none;
+}
+@media (max-width: 1000px) {
+  /* .containerContact h3 {
+        font-size: 1.6rem;
+        letter-spacing: 0.1em;
+        line-height: 1.2em;
+      } */
+}
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .minSize {
+    height: auto;
+  }
+  .containerBio {
+    padding: 0 20px;
+  }
+  .mobileOnly {
+    display: inline;
+  }
+  .desktopOnly {
+    display: none;
+  }
+  .GridContact {
+    grid-template-columns: 100%;
+    padding: 10px;
+  }
+  .GridContact div {
+    padding: 0 10px;
+  }
+  .containerBio h1 {
+    font-size: 6vw;
+    letter-spacing: 0.1em;
+  }
+  .containerContact h3 {
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    line-height: 1.2em;
+  }
+  .gridWithTwo {
+    grid-template-columns: 100%;
+    box-sizing: border-box;
+    column-gap: 0px;
+    padding: 0;
+  }
+}

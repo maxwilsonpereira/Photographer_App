@@ -1,0 +1,132 @@
+.AppContainer {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.AppContainer h1 {
+  color: rgb(50, 50, 50);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+  font-family: LibreBaskerville-Regular;
+  text-transform: uppercase !important;
+  font-size: 1.8rem;
+  line-height: 1.2em;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  text-transform: none;
+  font-weight: normal;
+}
+.AppContainer h2 {
+  color: rgb(50, 50, 50);
+  font-family: LibreBaskerville-Regular;
+  text-transform: uppercase !important;
+  font-size: 1.3rem;
+  letter-spacing: 0.25em;
+  word-spacing: 0em;
+  line-height: 1.4em;
+  text-transform: none;
+  font-weight: normal;
+}
+.paddingLateral {
+  padding: 0 10px;
+}
+.imageFrame {
+  width: 100%;
+  max-width: 280px;
+  border-radius: 5px;
+  cursor: pointer;
+  /* -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); */
+  filter: brightness(80%);
+  -webkit-filter: brightness(80%);
+  box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.9);
+  transition: 0.4s ease-in-out;
+}
+.imageFrame:hover {
+  box-shadow: 6px 6px 5px 0px rgba(0, 0, 0, 0.8);
+  filter: brightness(95%);
+  -webkit-filter: brightness(95%);
+  /* filter: contrast(1); */
+  /* transform: scale(1.01); */
+  /* opacity: 0.9; */
+}
+/* GRID: */
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named */
+.GridContainer {
+  display: grid;
+  grid-template-columns: 40% 40%; /* 2 columns */
+  grid-gap: 0px;
+  justify-content: space-around;
+  padding: 10px 70px;
+}
+.GridContainer > div {
+  position: relative;
+  /* overflow: hidden; */
+  border-radius: 5px;
+  /* background-color: rgba(255, 255, 255, 0.8); */
+  text-align: center;
+  padding: 0;
+  /* font-size: 30px; */
+}
+.GridContainer h3 {
+  position: absolute;
+  pointer-events: none;
+  font-size: 3em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: LibreBaskerville-Regular;
+  color: white;
+  z-index: 2;
+}
+.GridContainer h4 {
+  position: absolute;
+  pointer-events: none;
+  font-size: 2em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: LibreBaskerville-Regular;
+  color: white;
+  z-index: 2;
+}
+.item1 {
+  grid-area: fotografia;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.item2 {
+  grid-area: livros;
+  border-radius: 10px;
+  overflow: hidden;
+}
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .AppContainer h1 {
+    font-size: 1.5rem;
+    line-height: 1.1em;
+  }
+  .GridContainer {
+    grid-template-columns: 50% 50%; /* 2 columns */
+    grid-gap: 0px;
+    justify-content: space-around;
+    padding: 0px 0px;
+  }
+  .GridContainer > div {
+    margin-bottom: 30px;
+  }
+  .imageFrame {
+    /* width: 90%; */
+    max-width: 42vw;
+    border-radius: 5px;
+    /* -webkit-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0, 0, 0, 0.75); */
+    box-shadow: 4px 4px 3px 0px rgba(0, 0, 0, 0.8);
+    transition: 0.4s ease-in-out;
+  }
+  /* .GridContainer h4 {
+      font-size: 2em;
+    } */
+}

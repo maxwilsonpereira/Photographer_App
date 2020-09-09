@@ -1,0 +1,210 @@
+.centeredAligned {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.titles {
+  position: absolute;
+  color: white;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  z-index: 1;
+  max-width: 800px;
+  padding: 50px;
+  transition: 1s ease-in-out;
+}
+.titles h1 {
+  color: white;
+  opacity: 0.8;
+  font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
+  text-transform: uppercase !important;
+  font-size: 2.5rem;
+  letter-spacing: 0.15em;
+  word-spacing: 0em;
+  line-height: 1.8em;
+  text-transform: none;
+  font-weight: normal;
+}
+.titles h2 {
+  color: white;
+  opacity: 0.8;
+  font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
+  /* text-transform: uppercase !important; */
+  text-align: center !important;
+  font-size: 1.1rem;
+  letter-spacing: 0.25em;
+  word-spacing: 0em;
+  line-height: 1.4em;
+  text-transform: none;
+  font-weight: normal;
+}
+.luizLogo {
+  /* display: inline-block; */
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 5%;
+  width: 15em;
+
+  /* -webkit-filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+  filter: drop-shadow(1px 1px 0 rgb(255, 255, 255))
+    drop-shadow(-1px -1px 0 rgb(247, 239, 239)); */
+
+  animation: 12s infinite linear;
+  animation-name: logozoom;
+}
+@keyframes logozoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.AppContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.paddingLateral {
+  padding: 0 10px;
+}
+.mainIgmDiv {
+  filter: brightness(50%);
+
+  height: 700px;
+  width: 100%;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-size: cover;
+}
+.imageFrame {
+  filter: brightness(60%);
+
+  width: 100%;
+  height: 450px;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+  /* DIPLAY BLOCK TO AVOID MARGIN BOTTOM: */
+  display: block;
+  /* IF NECESSARY: */
+  /* margin-bottom: -2px; */
+  transition: 0.8s ease-in-out;
+}
+.imageFrame:hover {
+  transform: scale(1.1) rotate(2deg);
+  /* opacity: 0.6; */
+  filter: brightness(80%);
+}
+.backgroundOnScroll {
+  transition: 1s ease-in-out;
+}
+/* GRID: */
+/* https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named */
+.GridContainer {
+  display: grid;
+  grid-template-areas:
+    "eventos empresas"
+    "nopalco retratos";
+  /* background-color: #2196f3; */
+  /* padding: 10px 20px; */
+}
+.GridContainer > div {
+  position: relative;
+  overflow: hidden;
+  /* text-align: center; */
+  /* font-size: 30px; */
+}
+
+.GridContainer h3 {
+  position: absolute;
+  text-decoration: underline;
+  pointer-events: none;
+  font-size: 2.8em;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: LibreBaskerville-Regular, georgia, Arial, Helvetica, sans-serif;
+  text-transform: uppercase !important;
+  color: white;
+  z-index: 2;
+}
+.item1 {
+  grid-area: empresas;
+}
+.item2 {
+  grid-area: eventos;
+}
+.item3 {
+  grid-area: nopalco;
+}
+.item4 {
+  grid-area: retratos;
+}
+.backgroundMobile {
+  animation: 4s linear;
+  animation-name: brightnessAnimation;
+}
+@keyframes brightnessAnimation {
+  0% {
+    filter: brightness(30%);
+    /* filter: contrast(1); */
+    -webkit-filter: brightness(30%);
+    /* -webkit-filter: contrast(1); */
+  }
+  60% {
+    filter: brightness(30%);
+    -webkit-filter: brightness(30%);
+  }
+  100% {
+    filter: brightness(90%);
+    -webkit-filter: brightness(90%);
+  }
+}
+.MobileOnly {
+  display: none;
+}
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .MobileDontShow {
+    display: none;
+  }
+  .MobileOnly {
+    display: inline;
+  }
+  .GridContainer {
+    grid-template-areas:
+      "empresas"
+      "eventos"
+      "nopalco"
+      "retratos";
+  }
+  .titles {
+    top: 60%;
+  }
+  .titles h1 {
+    font-size: 1.6rem;
+  }
+  .titles h2 {
+    font-size: 1.2rem;
+    line-height: 1.4em;
+    text-align: justify;
+  }
+  .GridContainer h3 {
+    font-size: 8vw;
+  }
+  .luizLogo {
+    width: 70vw;
+  }
+}

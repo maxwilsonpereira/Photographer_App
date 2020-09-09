@@ -1,0 +1,121 @@
+.luizLogo {
+  /* display: inline-block; */
+  position: absolute;
+  z-index: 1;
+  top: 5%;
+  left: 5%;
+  width: 15em;
+
+  /* -webkit-filter: drop-shadow(1px 1px 0 black) drop-shadow(-1px -1px 0 black);
+    filter: drop-shadow(1px 1px 0 rgb(255, 255, 255))
+      drop-shadow(-1px -1px 0 rgb(247, 239, 239)); */
+
+  animation: 12s infinite linear;
+  animation-name: logozoom;
+}
+@keyframes logozoom {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.AppContainer {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.imageFrame {
+  width: 100%;
+  min-height: 450px;
+  object-fit: cover;
+  padding: 0;
+  margin: 0;
+  /* DIPLAY BLOCK TO AVOID MARGIN BOTTOM: */
+  display: block;
+  /* IF NECESSARY: */
+  /* margin-bottom: -2px; */
+  transition: 0.8s ease-in-out;
+}
+.imageFrame:hover {
+  transform: scale(1.05) rotate(1deg);
+  /* filter: brightness(40%); */
+}
+.backgroundOnScroll {
+  transition: 1s ease-in-out;
+}
+/* GRID: */
+/*
+https://www.w3schools.com/css/tryit.asp?filename=trycss_grid_layout_named
+*/
+.GridContainer {
+  display: grid;
+  grid-template-areas:
+    "item1 item1 item1 item1"
+    "item2 item2 item3 item3"
+    "item4 item4 item5 item5"
+    "item6 item6 item6 item6"
+    "item7 item7 item8 item8";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+
+  /* background-color: #2196f3; */
+  /* padding: 10px 20px; */
+}
+.GridContainer > div {
+  position: relative;
+  overflow: hidden;
+  /* text-align: center; */
+  /* font-size: 30px; */
+}
+/* .heighDouble {
+  height: 900px;
+} */
+.item1 {
+  grid-area: item1;
+}
+.item2 {
+  grid-area: item2;
+}
+.item3 {
+  grid-area: item3;
+}
+.item4 {
+  grid-area: item4;
+}
+.item5 {
+  grid-area: item5;
+}
+.item6 {
+  grid-area: item6;
+}
+.item7 {
+  grid-area: item7;
+}
+.item8 {
+  grid-area: item8;
+}
+
+/* ***** MOBILE ***** */
+@media (max-width: 700px) {
+  .GridContainer {
+    display: grid;
+    grid-template-areas:
+      "item1"
+      "item2"
+      "item3"
+      "item4"
+      "item5"
+      "item6"
+      "item7"
+      "item8";
+    grid-template-columns: 1fr;
+    /* background-color: #2196f3; */
+    /* padding: 10px 20px; */
+  }
+}
