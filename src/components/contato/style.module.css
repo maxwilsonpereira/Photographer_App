@@ -97,6 +97,10 @@ input[type="number"]::-webkit-outer-spin-button {
   /* color: rgb(50, 50, 50); */
   color: #8f2c31;
 }
+.spinerContainer {
+  /* making the spinner thinner: */
+  font-size: 11px;
+}
 .colorsWebSite {
   color: #8f2c31;
   color: #0155a0; /* hover */

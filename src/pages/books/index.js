@@ -12,6 +12,7 @@ import LogoWhiteSmall from "../../components/misc/logoSmallWhite";
 import coverImg from "../../assets/images/books/cover.jpg";
 import GridBooks from "./GridBooks";
 import MessageSection from "../../components/messageSection";
+import Footer from "../../components/footer";
 
 export default function Home() {
   return (
@@ -61,6 +62,7 @@ export default function Home() {
         author='"Bill Brandt"'
       />
       {/* <hr /> */}
+      <Footer />
     </>
   );
 }

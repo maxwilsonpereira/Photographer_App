@@ -11,6 +11,7 @@ import classes from "./style.module.css";
 import GridOptions from "../../components/GridOptions";
 import MessageSection from "../../components/messageSection";
 import TextDown from "../../components/textDown";
+import Footer from "../../components/footer";
 
 // import LuizLogoBlack from "../../components/misc/logoBlack";
 import LogoWhiteSmall from "../../components/misc/logoSmallWhite";
@@ -68,6 +69,7 @@ export default function Home() {
         text="A photographer must possess and retain the receptive faculties of a child who watches the world for the first time."
         author='"Ansel Adams"'
       />
+      <Footer />
     </>
   );
 }

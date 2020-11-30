@@ -48,30 +48,14 @@ export default function Fotografia(props) {
       <div id="start" style={{ position: "absolute", top: "0px" }} />
 
       <div className={classes.GridContainer}>
-        <div className={classes.item1} onClick={() => toggleModal(0)}>
-          <img className={classes.imageFrame} src={props.images[0]} />
-        </div>
-        <div className={classes.item2} onClick={() => toggleModal(1)}>
-          <img className={classes.imageFrame} src={props.images[1]} />
-        </div>
-        <div className={classes.item3} onClick={() => toggleModal(2)}>
-          <img className={classes.imageFrame} src={props.images[2]} />
-        </div>
-        <div className={classes.item4} onClick={() => toggleModal(3)}>
-          <img className={classes.imageFrame} src={props.images[3]} />
-        </div>
-        <div className={classes.item5} onClick={() => toggleModal(4)}>
-          <img className={classes.imageFrame} src={props.images[4]} />
-        </div>
-        <div className={classes.item6} onClick={() => toggleModal(5)}>
-          <img className={classes.imageFrame} src={props.images[5]} />
-        </div>
-        <div className={classes.item7} onClick={() => toggleModal(6)}>
-          <img className={classes.imageFrame} src={props.images[6]} />
-        </div>
-        <div className={classes.item8} onClick={() => toggleModal(7)}>
-          <img className={classes.imageFrame} src={props.images[7]} />
-        </div>
+        {props.images.map((img, index) => (
+          <div
+            className={classes[`item${index + 1}`]}
+            onClick={() => toggleModal(index)}
+          >
+            <img className={classes.imageFrame} src={img} alt="" />
+          </div>
+        ))}
       </div>
     </>
   );

@@ -15,25 +15,25 @@ export default function GridOptions() {
       <div className={classes.item1}>
         <h3>Events</h3>
         <NavHashLink to="/photography/events#start">
-          <img className={classes.imageFrame} src={eventos} />
+          <img className={classes.imageFrame} src={eventos} alt="" />
         </NavHashLink>
       </div>
       <div className={classes.item2}>
         <h3>Portraits</h3>
         <NavHashLink to="/photography/portraits#start">
-          <img className={classes.imageFrame} src={retratos} />
+          <img className={classes.imageFrame} src={retratos} alt="" />
         </NavHashLink>
       </div>
       <div className={classes.item3}>
         <h3>Stages</h3>
         <NavHashLink to="/photography/stages#start">
-          <img className={classes.imageFrame} src={nopalco} />
+          <img className={classes.imageFrame} src={nopalco} alt="" />
         </NavHashLink>
       </div>
       <div className={classes.item4}>
         <h3>Companies</h3>
         <NavHashLink to="/photography/companies#start">
-          <img className={classes.imageFrame} src={empresas} />
+          <img className={classes.imageFrame} src={empresas} alt="" />
         </NavHashLink>
       </div>
     </div>

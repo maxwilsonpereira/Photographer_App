@@ -33,7 +33,7 @@ const store = createStore(
 
 ReactDOM.render(
   <React.StrictMode>
-    {/* <Provider store={store}> IS FRROM REDUX */}
+    {/* <Provider store={store}> IS FROM REDUX */}
     <Provider store={store}>
       <App />
     </Provider>

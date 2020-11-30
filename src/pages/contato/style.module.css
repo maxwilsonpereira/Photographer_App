@@ -1,7 +1,8 @@
-.centeredAligned {
-  text-align: center;
+.containerMain {
+  /* text-align: center;
   margin-left: auto;
-  margin-right: auto;
+  margin-right: auto; */
+  padding: 0 30px;
 }
 /* .backColor {
   background: linear-gradient(

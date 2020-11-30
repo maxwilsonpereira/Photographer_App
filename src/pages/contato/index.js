@@ -31,7 +31,7 @@ export default function Home() {
         <img src={contactImg} />
       </div>
 
-      <div className={[classes.centeredAligned, classes.backColor].join(" ")}>
+      <div className={[classes.containerMain, classes.backColor].join(" ")}>
         {/* <div className={classes.backColorDarker}> */}
         <div className={classes.containerContact}>
           <div id="anchorPoint" style={{ position: "absolute", top: "0px" }} />

@@ -67,9 +67,6 @@ const Series = React.lazy(() => {
 const Workshop = React.lazy(() => {
   return import("./pages/workshop");
 });
-const Footer = React.lazy(() => {
-  return import("./components/footer");
-});
 
 function App() {
   return (
@@ -92,7 +89,6 @@ function App() {
           <Route path="/photography" component={Fotografia} />
           <Route path="/" component={Home} />
         </Switch>
-        <Footer />
       </Suspense>
     </BrowserRouter>
   );

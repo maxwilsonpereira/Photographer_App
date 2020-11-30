@@ -14,6 +14,10 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import classes from "./style.module.css";
 import ButtonFunc from "../UI/Buttons/ButtonFunc";
 
+// SPINNER / LOADER:
+// https://www.npmjs.com/package/react-loader-spinner
+import Loader from "react-loader-spinner";
+
 // npm i react-icons
 // https://react-icons.github.io/react-icons/
 import { MdEmail } from "react-icons/md";
@@ -36,6 +40,15 @@ export default function Contato(props) {
   }, [messageToUser]);
 
   function sendEmailHandler(e) {
+    setMessageToUser(
+      <Loader
+        type="Oval"
+        color="#4d7994"
+        height={50}
+        width={50}
+        // timeout={3000}
+      />
+    );
     e.preventDefault();
     const pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
     if (!pattern.test(email)) {
@@ -89,7 +102,7 @@ export default function Contato(props) {
           // PARAMS:
           templateParams,
           // USER ID (get at emailjs.com / Account/API KEYS):
-          "user_UD6GHnWA9A9R2eXaKuLwf"
+          process.env.REACT_APP_EMAILJS_KEY
         )
         .then(
           function (response) {

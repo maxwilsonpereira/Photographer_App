@@ -39,37 +39,37 @@ export default function GripOption() {
             <div className={classes.item1}>
               <h3>Photography</h3>
               <NavHashLink to="/photography#start">
-                <img className={classes.imageFrame} src={fotografia} />
+                <img className={classes.imageFrame} src={fotografia} alt="" />
               </NavHashLink>
             </div>
             <div className={classes.item2}>
               <h4>Books</h4>
               <NavHashLink to="/books#start">
-                <img className={classes.imageFrame} src={livros} />
+                <img className={classes.imageFrame} src={livros} alt="" />
               </NavHashLink>
             </div>
             <div className={classes.item3}>
               <h4>Series</h4>
               <NavHashLink to="/series#start">
-                <img className={classes.imageFrame} src={series} />
+                <img className={classes.imageFrame} src={series} alt="" />
               </NavHashLink>
             </div>
             <div className={classes.item4}>
               <h3>Workshop</h3>
               <NavHashLink to="/workshop#start">
-                <img className={classes.imageFrame} src={workshop} />
+                <img className={classes.imageFrame} src={workshop} alt="" />
               </NavHashLink>
             </div>
             <div className={classes.item5}>
               <h4>Biography</h4>
               <NavHashLink to="/biography#start">
-                <img className={classes.imageFrame} src={biografia} />
+                <img className={classes.imageFrame} src={biografia} alt="" />
               </NavHashLink>
             </div>
             <div className={classes.item6}>
               <h4>Contact</h4>
               <NavHashLink to="/contact#start">
-                <img className={classes.imageFrame} src={contato} />
+                <img className={classes.imageFrame} src={contato} alt="" />
               </NavHashLink>
             </div>
           </div>

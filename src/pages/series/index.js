@@ -7,6 +7,7 @@ import classes from "./style.module.css";
 
 import GridOptions from "./gridOptions";
 import LogoWhiteSmall from "../../components/misc/logoSmallWhite";
+import Footer from "../../components/footer";
 
 import mainImg from "../../assets/images/series/series.jpg";
 
@@ -79,6 +80,7 @@ export default function Fotografia() {
         ></div>
         <GridOptions />
       </div>
+      {/* <Footer /> */}
     </>
   );
 }

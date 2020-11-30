@@ -7,6 +7,7 @@ import imgMain from "../../assets/images/workshop/main.jpg";
 import Workshop from "./workshop";
 import TextDown from "../../components/textDown";
 import MessageSection from "../../components/messageSection";
+import Footer from "../../components/footer";
 
 export default function Home() {
   return (
@@ -40,6 +41,7 @@ export default function Home() {
         text="Beauty can be seen in all things, seeing and composing the beauty is what separates the snapshot from the photograph."
         author='"Matt Hardy"'
       />
+      <Footer />
     </>
   );
 }
